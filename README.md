@@ -1,26 +1,15 @@
 # web-crawler
 #爬國稅局發票中獎資料
+#發票週期
 
 import requests
 from bs4 import BeautifulSoup
 import numpy as np
+
 year_date = str(input("請輸入查詢年和奇數月:"))
-
-
+# year_date = '11107'
 if len(year_date)<=5:
-    # url = 'https://invoice.etax.nat.gov.tw/index.html'
-    # headers = {'useragent': 'Mozilla / 5.0(Linux;Android6.0; Nexus 5 Build / MRA58N) AppleWebKit / 537.36(KHTML, likeGecko) Chrome / 106.0.0.0 Mobile Safari / 537.36'}
-    # rs =requests.get(url, headers = headers)
-    # rs.encoding = 'utf-8'
-    # html_doc = resp.text
-    # soup = BeautifulSoup(html_doc, "lxml")  # 解析器'lxml' //html.parser
-
-    # print(rs.text)
-    # etw-mobile
-
-
-
-    # etw - container
+   
     url = 'https://www.etax.nat.gov.tw/etw-main/ETW183W2_' + year_date
     headers = {'useragent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64} AppleWebKit/537.36(KHTML, likeGecko) Chrome/65.0.3342.181 Safari/537.36'}  #授權
     resp = requests.get(url, headers = headers)
