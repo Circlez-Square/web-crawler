@@ -7,7 +7,6 @@ from bs4 import BeautifulSoup
 import numpy as np
 
 year_date = str(input("請輸入查詢年和奇數月:"))
-# year_date = '11107'
 if len(year_date)<=5:
    
     url = 'https://www.etax.nat.gov.tw/etw-main/ETW183W2_' + year_date
@@ -26,17 +25,9 @@ if len(year_date)<=5:
     A = p_tags[0].text
     B = p_tags[1].text
     C = p_tags[2].text
-    # print(type(A))
-    # print(A)
     a = A.lstrip()
     b = B.lstrip()
     c = C.lstrip()
-    # print(a[3])
-
-    # l = []
-    # for i in range(0, len(a), 5):
-    #     l.append(a[i: i + 5])
-    # print(a[5:8])
     print('增開六獎:',a[5:8])
     print('增開六獎:',b[5:8])
     print('增開六獎:',c[5:8])
