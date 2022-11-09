@@ -1,5 +1,7 @@
 # web-crawler
 #爬國稅局發票中獎資料
+
+
 import requests
 from bs4 import BeautifulSoup
 import numpy as np
