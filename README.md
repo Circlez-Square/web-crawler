@@ -2,10 +2,11 @@
 #爬國稅局發票中獎資料
 #發票週期
 
+
+
 import requests
 from bs4 import BeautifulSoup
 import numpy as np
-
 year_date = str(input("請輸入查詢年和奇數月:"))
 if len(year_date)<=5:
    
